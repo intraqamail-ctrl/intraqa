@@ -122,7 +122,11 @@ export function Chatbot() {
             aria-expanded={open}
             className="glow-ring relative z-10 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-cream shadow-2xl transition hover:scale-[1.05] max-sm:h-12 max-sm:w-12"
           >
-            {open ? <X className="h-5 w-5" strokeWidth={2} aria-hidden /> : <Bot className="h-[1.35rem] w-[1.35rem]" strokeWidth={2} aria-hidden />}
+            {open ? (
+              <X className="h-5 w-5" strokeWidth={2} aria-hidden />
+            ) : (
+              <Bot className="h-[1.35rem] w-[1.35rem]" strokeWidth={2} aria-hidden />
+            )}
           </button>
         </div>
       </div>
@@ -136,7 +140,9 @@ export function Chatbot() {
               <Bot className="size-[1.0625rem]" strokeWidth={2} />
             </div>
             <div className="min-w-0">
-              <div className="text-sm font-semibold leading-tight tracking-tight">Intra · IntraQA</div>
+              <div className="text-sm font-semibold leading-tight tracking-tight">
+                Intra · IntraQA
+              </div>
               <div className="text-xs text-cream/70">Avg reply within one business day</div>
             </div>
           </div>

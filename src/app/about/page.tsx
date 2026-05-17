@@ -18,11 +18,11 @@ export default function Page() {
         <div className="container-x relative">
           <Eyebrow>/ about /</Eyebrow>
           <h1 className="mt-5 max-w-4xl font-display text-5xl font-semibold leading-[1.02] tracking-tight md:text-7xl">
-            We build software that <span className="text-[var(--brand)]">won't break</span>   and{" "}
+            We build software that <span className="text-[var(--brand)]">won't break</span> and{" "}
             <span className="text-[var(--amber-glow)]">won't be broken</span>.
           </h1>
           <p className="mt-6 max-w-2xl text-cream/70">
-            IntraQA is a remote-first SDET house. Senior testers, ethical hackers and AI engineers  
+            IntraQA is a remote-first SDET house. Senior testers, ethical hackers and AI engineers
             embedded with product teams that care about how, not just what, they ship.
           </p>
         </div>
@@ -42,12 +42,12 @@ export default function Page() {
           <div className="space-y-4 text-base text-muted-foreground">
             <p>
               IntraQA exists because too many companies treat quality engineering like an
-              afterthought   a tax paid at the end of a sprint, by whoever has bandwidth.
+              afterthought a tax paid at the end of a sprint, by whoever has bandwidth.
             </p>
             <p>
               We've been the in-house QA lead. The lone security engineer. The poor SDET trying to
               keep up with three release trains. We started IntraQA so product teams could hire the
-              team they always wished they had   without the headcount.
+              team they always wished they had without the headcount.
             </p>
             <p>
               Our engineers don't just run scripts. They write strategy, set up tooling, sit in your

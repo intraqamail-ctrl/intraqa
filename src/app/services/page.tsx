@@ -28,7 +28,7 @@ export default function Page() {
           </h1>
           <p className="mt-6 max-w-2xl text-cream/70">
             From exploratory testing to LLM red-teaming, from cloud migration to CERT-In empanelled
-            audits   every service we offer is built and delivered by senior engineers.
+            audits every service we offer is built and delivered by senior engineers.
           </p>
         </div>
       </section>

@@ -85,9 +85,9 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="mt-6 max-w-lg text-pretty text-[0.9375rem] leading-relaxed text-cream/78 sm:text-[1rem] lg:mt-5 lg:max-w-xl lg:text-[1.0625rem]"
           >
-            The external quality engineering & security powerhouse for modern companies. Senior SDETs
-            and ethical hackers paired with AI-accelerated workflows, so you ship with evidence,
-            resilience, and calm.
+            The external quality engineering & security powerhouse for modern companies. Senior
+            SDETs and ethical hackers paired with AI-accelerated workflows, so you ship with
+            evidence, resilience, and calm.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -349,7 +349,7 @@ function USP() {
           eyebrow="/ how we work /"
           title={
             <>
-              Built like a senior team  {" "}
+              Built like a senior team{" "}
               <span className="text-[var(--brand)]">priced like a partner</span>.
             </>
           }
@@ -391,7 +391,10 @@ function Hashtags() {
   const mastGap = "px-5 md:px-9";
 
   return (
-    <section className="relative overflow-hidden bg-cream py-[5.75rem] md:py-[7.25rem]" aria-label="Themes we work across">
+    <section
+      className="relative overflow-hidden bg-cream py-[5.75rem] md:py-[7.25rem]"
+      aria-label="Themes we work across"
+    >
       <div className="relative mx-auto min-h-[18.5rem] w-full md:min-h-[22.5rem]">
         {/* QA / automation ribbon (rear, deep crimson) */}
         <div className="absolute left-1/2 top-[6%] z-0 w-[min(168vw,2560px)] -translate-x-1/2 -rotate-[3.25deg] bg-[linear-gradient(to_bottom,color-mix(in_oklab,oklch(0.4_0.19_26)_94%,transparent),oklch(0.34_0.165_26))] py-6 shadow-[0_14px_40px_-22px_oklch(0.28_0.14_25/0.55)] md:top-[11%] md:py-[1.75rem] lg:py-8">

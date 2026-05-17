@@ -55,20 +55,11 @@ export function Marquee({
 }) {
   return (
     <div className="relative overflow-hidden">
-      <div
-        className={cn(
-          "marquee-track",
-          speed === "slow" && "slow",
-          reverse && "reverse",
-        )}
-      >
+      <div className={cn("marquee-track", speed === "slow" && "slow", reverse && "reverse")}>
         {[...items, ...items].map((item, i) => (
           <div
             key={i}
-            className={cn(
-              "flex shrink-0 items-center",
-              itemWrapperClassName ?? "gap-12 px-6",
-            )}
+            className={cn("flex shrink-0 items-center", itemWrapperClassName ?? "gap-12 px-6")}
           >
             {item}
           </div>

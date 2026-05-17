@@ -51,7 +51,7 @@ export default function Page() {
           </h1>
           <p className="mt-6 max-w-2xl text-cream/70">
             We're remote-first, deeply technical, and obsessed with craft. If you find joy in
-            finding bugs other people miss   we should talk.
+            finding bugs other people miss we should talk.
           </p>
           <a
             href={`mailto:${site.emails.careers}`}

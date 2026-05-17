@@ -58,9 +58,7 @@ function MinimalNavTrigger({
     <span
       className={cn(
         "relative inline-flex items-center whitespace-nowrap rounded-lg leading-snug font-medium tracking-tight text-foreground transition-[padding,opacity] duration-300 ease-out",
-        dense
-          ? "px-2.5 py-2 text-[13px]"
-          : "px-3 py-2 text-[13px] sm:px-3.5",
+        dense ? "px-2.5 py-2 text-[13px]" : "px-3 py-2 text-[13px] sm:px-3.5",
         active &&
           "after:pointer-events-none after:absolute after:inset-x-2.5 after:bottom-0 after:z-[1] after:h-[2px] after:rounded-[1px] after:bg-red-500 sm:after:inset-x-2 lg:after:inset-x-3",
         !active && "hover:opacity-90",
@@ -156,9 +154,7 @@ export function Header() {
           className={cn(
             "container-x",
             outerShellTransition,
-            scrolled
-              ? "px-4 pb-2.5 pt-2.5 sm:px-5 lg:px-6"
-              : "px-3 pb-2.5 pt-3 sm:px-4 lg:px-5",
+            scrolled ? "px-4 pb-2.5 pt-2.5 sm:px-5 lg:px-6" : "px-3 pb-2.5 pt-3 sm:px-4 lg:px-5",
           )}
         >
           <div
@@ -431,7 +427,11 @@ function ServicesMegaPanel({ pathname, open }: { pathname: string; open: boolean
         "backdrop-blur-xl",
       )}
     >
-      <div className="px-4 pb-3 pt-3.5 sm:px-6 sm:pb-4 sm:pt-4" role="tablist" aria-label="Practice areas">
+      <div
+        className="px-4 pb-3 pt-3.5 sm:px-6 sm:pb-4 sm:pt-4"
+        role="tablist"
+        aria-label="Practice areas"
+      >
         <div className="-mb-px flex flex-wrap gap-x-1 gap-y-1 border-b border-border/40 pb-px sm:gap-x-2 lg:flex-nowrap lg:justify-between lg:gap-x-3">
           {serviceCategories.map((c) => {
             const sel = tab === c.slug;
@@ -458,7 +458,10 @@ function ServicesMegaPanel({ pathname, open }: { pathname: string; open: boolean
         </div>
       </div>
 
-      <div role="tabpanel" className="max-h-[min(58vh,480px)] overflow-y-auto px-4 py-4 sm:px-6 sm:py-5">
+      <div
+        role="tabpanel"
+        className="max-h-[min(58vh,480px)] overflow-y-auto px-4 py-4 sm:px-6 sm:py-5"
+      >
         <p className="mb-3 text-[12px] leading-relaxed text-muted-foreground sm:mb-4 sm:text-[13px]">
           {cat.blurb}
         </p>
@@ -644,7 +647,9 @@ function MobileDropdownGroup({
 }
 
 function ServicesMobileTabs({ pathname, close }: { pathname: string; close: () => void }) {
-  const [tab, setTab] = useState(() => serviceCategorySlugFromPath(pathname) ?? serviceCategories[0].slug);
+  const [tab, setTab] = useState(
+    () => serviceCategorySlugFromPath(pathname) ?? serviceCategories[0].slug,
+  );
   useEffect(() => {
     const s = serviceCategorySlugFromPath(pathname);
     if (s) setTab(s);
