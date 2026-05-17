@@ -374,28 +374,39 @@ function USP() {
 }
 
 function Hashtags() {
+  const ribbonItem =
+    "flex min-h-[2.85rem] items-center whitespace-nowrap font-sans text-[1rem] font-bold tracking-[-0.02em] text-white md:min-h-[3.35rem] md:text-lg lg:min-h-[3.65rem]";
+
+  const qaRow = hashtags.map((h) => (
+    <span key={h} className={ribbonItem}>
+      {h}
+    </span>
+  ));
+  const secRow = hashtagsSec.map((h) => (
+    <span key={h} className={ribbonItem}>
+      {h}
+    </span>
+  ));
+
+  const mastGap = "px-5 md:px-9";
+
   return (
-    <section className="section-dark border-y border-border py-14 text-cream">
-      <Marquee
-        speed="slow"
-        items={hashtags.map((h) => (
-          <span
-            key={h}
-            className="font-mono text-base text-cream/40 hover:text-[var(--amber-glow)]"
-          >
-            {h}
-          </span>
-        ))}
-      />
-      <div className="h-3" />
-      <Marquee
-        reverse
-        items={hashtagsSec.map((h) => (
-          <span key={h} className="font-mono text-base text-cream/40 hover:text-[var(--cyber)]">
-            {h}
-          </span>
-        ))}
-      />
+    <section className="relative overflow-hidden bg-cream py-[5.75rem] md:py-[7.25rem]" aria-label="Themes we work across">
+      <div className="relative mx-auto min-h-[18.5rem] w-full md:min-h-[22.5rem]">
+        {/* QA / automation ribbon (rear, deep crimson) */}
+        <div className="absolute left-1/2 top-[6%] z-0 w-[min(168vw,2560px)] -translate-x-1/2 -rotate-[3.25deg] bg-[linear-gradient(to_bottom,color-mix(in_oklab,oklch(0.4_0.19_26)_94%,transparent),oklch(0.34_0.165_26))] py-6 shadow-[0_14px_40px_-22px_oklch(0.28_0.14_25/0.55)] md:top-[11%] md:py-[1.75rem] lg:py-8">
+          <div className="overflow-hidden px-1">
+            <Marquee speed="slow" itemWrapperClassName={mastGap} items={qaRow} />
+          </div>
+        </div>
+
+        {/* Cyber / compliance ribbon (front, black → reads on top where bands cross) */}
+        <div className="absolute left-1/2 top-[48%] z-[1] w-[min(168vw,2560px)] -translate-x-1/2 rotate-[3.25deg] bg-ink py-6 shadow-[0_18px_50px_-24px_rgb(0_0_0/0.42)] md:top-[42%] md:py-[1.75rem] lg:py-8">
+          <div className="overflow-hidden px-1">
+            <Marquee reverse speed="slow" itemWrapperClassName={mastGap} items={secRow} />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

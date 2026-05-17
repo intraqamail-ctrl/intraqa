@@ -233,6 +233,12 @@
   animation-direction: reverse;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
 /* Grid pattern */
 .bg-grid {
   background-image:

@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import { motion } from "motion/react";
+import { cn } from "@/lib/utils";
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
@@ -44,18 +45,31 @@ export function Marquee({
   items,
   speed = "normal",
   reverse = false,
+  itemWrapperClassName,
 }: {
   items: ReactNode[];
   speed?: "normal" | "slow";
   reverse?: boolean;
+  /** Overrides default horizontal spacing between items (mast ribbons use wider gaps). */
+  itemWrapperClassName?: string;
 }) {
   return (
     <div className="relative overflow-hidden">
       <div
-        className={`marquee-track ${speed === "slow" ? "slow" : ""} ${reverse ? "reverse" : ""}`}
+        className={cn(
+          "marquee-track",
+          speed === "slow" && "slow",
+          reverse && "reverse",
+        )}
       >
         {[...items, ...items].map((item, i) => (
-          <div key={i} className="flex shrink-0 items-center gap-12 px-6">
+          <div
+            key={i}
+            className={cn(
+              "flex shrink-0 items-center",
+              itemWrapperClassName ?? "gap-12 px-6",
+            )}
+          >
             {item}
           </div>
         ))}
